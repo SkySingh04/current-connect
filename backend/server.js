@@ -39,7 +39,7 @@ app.post('http://localhost:3000/api/perform-operation', (req, res) => {
 app.get("/order", (req, res) => {
     try {
       const options = {
-        amount: 500 *100, // amount == Rs 10
+        amount: 150 *100, // change this shirish 
         currency: "INR",
         receipt: "receipt#1",
         payment_capture: 0,
@@ -68,7 +68,7 @@ app.get("/order", (req, res) => {
           method: "POST",
           url: `https://${PAYMENTID}:${PAYMENTKEY}@api.razorpay.com/v1/payments/${req.params.paymentId}/capture`,
           form: {
-            amount: 10*100, // amount == Rs 10 // Same As Order amount
+            amount: 150*100, // change this shirish
             currency: "INR",
           },
         },

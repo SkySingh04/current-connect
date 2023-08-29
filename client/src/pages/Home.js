@@ -29,11 +29,54 @@ export const Home = () => {
           <h1>
           "Current Solutions for Your Electric Bills: Fast, Secure, and User-Friendly."
           </h1>
-          <button onClick={() => navigate("/login")} className="loginbtn">
-            LOGIN
-          </button>
+          <br></br>
+          <br></br><br></br>
+
+          <br></br>
+          <br></br>
+
+          <br></br>
+          <br></br>
+
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          
+
+          <br></br>
+          <br></br>
+
+
+          <br></br>
+          <br></br>
+
+
+          <br></br>
+          <br></br>
+
+          <br></br>
+          <br></br>
+          <br></br>
+
+          <br></br>
+          <br></br>
+          
 
         </section>
+        <section className="buttonwala">
+        <button onClick={() => navigate("/login")} className="loginbtn">
+            LOGIN
+          </button>
+          </section>
       </div>
 
 

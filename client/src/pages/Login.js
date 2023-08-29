@@ -13,9 +13,9 @@ export const Login = () => {
 
   return (
     <div className="maindiv">
-      <h1 className="wel-sal">BIJLI KA BILL</h1>
+      <h1 className="wel-sal headingtext">Now Pay Your Bills At The Ease Of Your Fingertips</h1>
       <br />
-      <h3 className="p">Sign in with Google to get started...</h3>
+      <h2 className="headingtext">Sign in with Google to get started...</h2>
       <br />
       <button className="mainbtn" onClick={Signin}>
         <img

@@ -15,17 +15,24 @@ html {
 a {
   text-decoration: none;
 }
-
+ul{
+  color: white;
+}
 li {
+  color: white;
   list-style: none;
 }
-
+.whiter{
+  color: white;
+}
 /* 
  
 
 /* navbar style start  */
 
 .main-nav {
+  background-color: black;
+  color: white;
   width: 100%;
   height: 10rem;
   display: grid;
@@ -94,7 +101,6 @@ li {
 
 .menu-link ul li a {
   text-transform: capitalize;
-  color: rgba(0, 0, 3, 0.8);
   transition: 0.5s;
 }
 .menu-link ul li:hover > a {
@@ -308,8 +314,14 @@ li {
 .mainsec {
   text-align: center;
   padding: 40px 0;
-}
+  background-image: url("https://static.vecteezy.com/system/resources/previews/002/236/389/original/electricity-banner-vector.jpg");
+  background-position: -200px 10px;
+  height: 100%;
 
+}
+.buttonwala{
+  text-align: center;
+}
 h1 {
   font-size: 36px;
   margin-bottom: 20px;
@@ -344,20 +356,25 @@ nav.sticky {
 }
 
 .maindiv{
-    background-color: antiquewhite;
-    display: flex;
+  background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(7,7,120,1) 35%, rgba(0,212,255,1) 100%);  display: flex;
     flex-direction: column;
     height: 100vh;
+    width: 100vw;
     justify-content: center;
     align-items: center;
 }
+.headingtext{
+  color: white;
 
+}
 .mainbtn{
     padding: 20px 40px;
 }
 
 
 .App1 {
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(7,7,120,1) 35%, rgba(0,212,255,1) 100%);  display: flex;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -367,7 +384,9 @@ nav.sticky {
   }
   
   form {
-    background-color: #f4f4f4;
+    color: white;
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(7,78,120,1) 35%, rgba(0,212,255,1) 100%);
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
