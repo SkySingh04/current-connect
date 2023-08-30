@@ -17,7 +17,17 @@ export const Payment = () => {
   else{
     unit=200+(unit*7)
   }
+  axios.post("http://localhost:5001/updateUnit", {
+        unit: unit,
+      })
+      .then(() => {
+        console.log("Unit value updated on the server");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
 
+      
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -63,7 +73,12 @@ export const Payment = () => {
       //const rzp1 = new window.Razorpay({key});
       const rzp1 = new window.Razorpay(options);
       rzp1.open();
+
+      localStorage.setItem("unit", unit);
+      // Update unit on the server
+      
     }
+    
   };
 
   return (

@@ -21,16 +21,14 @@ var instance = new Razorpay({
   key_id: PAYMENTID,
   key_secret: PAYMENTKEY,
 });
-let bill=null
+var bill=null
 
-app.post('http://localhost:3000/api/perform-operation', (req, res) => {
-  const unit = req.body.value;
-  bill=unit
-  // Perform your operation using the receivedValue
-
-
-  res.json({ result:bill });
-  
+// Endpoint to update the unit value
+app.post("/updateUnit", (req, res) => {
+  const { unit } = req.body;
+  bill = unit; // Store the unit value
+  res.json({ message: "Unit value updated successfully" });
+  console.log(bill)
 });
 
 
@@ -38,8 +36,10 @@ app.post('http://localhost:3000/api/perform-operation', (req, res) => {
 
 app.get("/order", (req, res) => {
     try {
+      console.log("unit=" + bill)
+
       const options = {
-        amount: 150 *100, // change this shirish 
+        amount: bill *100, // change this shirish 
         currency: "INR",
         receipt: "receipt#1",
         payment_capture: 0,
@@ -63,12 +63,13 @@ app.get("/order", (req, res) => {
 
   app.post("/capture/:paymentId", (req, res) => {
     try {
+      console.log("bill=" + bill)
       return request(
         {
           method: "POST",
           url: `https://${PAYMENTID}:${PAYMENTKEY}@api.razorpay.com/v1/payments/${req.params.paymentId}/capture`,
           form: {
-            amount: 150*100, // change this shirish
+            amount: bill*100, // change this shirish
             currency: "INR",
           },
         },
